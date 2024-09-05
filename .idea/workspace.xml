@@ -5,38 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a1ee2a35-1a8d-4b3d-bc16-5b01120663e4" name="Changes" comment="Implemented essential architecture components across all microservices: Controllers to handle HTTP requests, Services to encapsulate business logic, and Repositories to manage data persistence. This commit ensures that each microservice (User Management, Task Management, and Notification) has a foundational structure for future development and integration.">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notification-service/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notification-service/build.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/example/notification/controller/NotificationController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/example/notification/dto/NotificationDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notification-service/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task-management-service/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task-management-service/build.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task-management-service/src/main/java/com/example/taskmanagement/controller/TaskController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task-management-service/src/main/java/com/example/taskmanagement/dto/TaskDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task-management-service/src/main/java/com/example/taskmanagement/service/TaskService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task-management-service/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-management-service/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-management-service/build.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-management-service/src/main/java/com/example/usermanagement/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-management-service/src/main/java/com/example/usermanagement/dto/UserDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-management-service/src/main/java/com/example/usermanagement/repository/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-management-service/src/main/java/com/example/usermanagement/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-management-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-service/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-service/src/main/java/com/example/notification/NotificationApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/notification/NotificationApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-service/src/main/java/com/example/notification/controller/NotificationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/notification/controller/NotificationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-service/src/main/java/com/example/notification/dto/NotificationDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/notification/dto/NotificationDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-service/src/main/java/com/example/notification/model/Notification.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/notification/model/Notification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-service/src/main/java/com/example/notification/repository/NotificationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/notification/repository/NotificationRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-service/src/main/java/com/example/notification/service/NotificationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/notification/service/NotificationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-management-service/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/task-management-service/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-management-service/src/main/java/com/example/taskmanagement/TaskManagementApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/task-management-service/src/main/java/com/taskmanagement/TaskManagementApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-management-service/src/main/java/com/example/taskmanagement/controller/TaskController.java" beforeDir="false" afterPath="$PROJECT_DIR$/task-management-service/src/main/java/com/taskmanagement/controller/TaskController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-management-service/src/main/java/com/example/taskmanagement/dto/TaskDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/task-management-service/src/main/java/com/taskmanagement/dto/TaskDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-management-service/src/main/java/com/example/taskmanagement/model/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/task-management-service/src/main/java/com/taskmanagement/model/Task.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-management-service/src/main/java/com/example/taskmanagement/repository/TaskRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/task-management-service/src/main/java/com/taskmanagement/repository/TaskRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-management-service/src/main/java/com/example/taskmanagement/service/TaskService.java" beforeDir="false" afterPath="$PROJECT_DIR$/task-management-service/src/main/java/com/taskmanagement/service/TaskService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-management-service/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/user-management-service/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-management-service/src/main/java/com/example/usermanagement/UserManagementApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-management-service/src/main/java/com/usermanagement/UserManagementApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-management-service/src/main/java/com/example/usermanagement/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-management-service/src/main/java/com/usermanagement/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-management-service/src/main/java/com/example/usermanagement/dto/UserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-management-service/src/main/java/com/usermanagement/dto/UserDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-management-service/src/main/java/com/example/usermanagement/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-management-service/src/main/java/com/usermanagement/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-management-service/src/main/java/com/example/usermanagement/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-management-service/src/main/java/com/usermanagement/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-management-service/src/main/java/com/example/usermanagement/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-management-service/src/main/java/com/usermanagement/service/UserService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,6 +82,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.NotificationApplication.executor": "Run",
     "Gradle.Build NebulaFlow.executor": "Run",
     "Gradle.NebulaFlow:notification-service [:notification-service:NotificationApplication.main()].executor": "Run",
     "Gradle.NebulaFlow:task-management-service [:task-management-service:TaskManagementApplication.main()].executor": "Run",
@@ -171,9 +163,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.NotificationApplication" />
         <item itemvalue="Application.TaskManagementApplication" />
         <item itemvalue="Application.UserManagementApplication" />
-        <item itemvalue="Application.NotificationApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -186,6 +178,15 @@
       <option name="presentableId" value="Default" />
       <updated>1725282986687</updated>
     </task>
+    <task id="LOCAL-00001" summary="Implemented essential architecture components across all microservices: Controllers to handle HTTP requests, Services to encapsulate business logic, and Repositories to manage data persistence. This commit ensures that each microservice (User Management, Task Management, and Notification) has a foundational structure for future development and integration.">
+      <option name="closed" value="true" />
+      <created>1725541878747</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1725541878747</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -198,5 +199,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Implemented essential architecture components across all microservices: Controllers to handle HTTP requests, Services to encapsulate business logic, and Repositories to manage data persistence. This commit ensures that each microservice (User Management, Task Management, and Notification) has a foundational structure for future development and integration." />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented essential architecture components across all microservices: Controllers to handle HTTP requests, Services to encapsulate business logic, and Repositories to manage data persistence. This commit ensures that each microservice (User Management, Task Management, and Notification) has a foundational structure for future development and integration." />
   </component>
 </project>
