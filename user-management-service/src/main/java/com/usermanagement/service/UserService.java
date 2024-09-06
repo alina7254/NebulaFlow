@@ -1,5 +1,6 @@
 package com.usermanagement.service;
 
+import com.usermanagement.dto.UserDTO;
 import com.usermanagement.model.User;
 import com.usermanagement.repository.UserRepository;
 import org.springframework.stereotype.Service;
@@ -19,5 +20,7 @@ public class UserService {
     public User findUserByUsername(String username) {
         return repository.findByUsername(username);
     }
+
+    
 }
 

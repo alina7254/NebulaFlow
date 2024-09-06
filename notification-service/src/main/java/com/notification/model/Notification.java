@@ -23,7 +23,5 @@ public class Notification {
     private String title;
     private String message;
     private LocalDateTime timestamp;
-
-
 }
 

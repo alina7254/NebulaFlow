@@ -6,7 +6,6 @@ import lombok.Setter;
 @Setter
 @Getter
 public class TaskDTO {
-    // Геттеры и сеттеры
     private Long id;
     private String title;
     private String description;
