@@ -3,14 +3,18 @@ package com.taskmanagement.controller;
 import com.taskmanagement.dto.TaskDTO;
 import com.taskmanagement.model.Task;
 import com.taskmanagement.service.TaskService;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/api/tasks")
 public class TaskController {
+
     private final TaskService service;
 
     public TaskController(TaskService service) {
@@ -18,25 +22,54 @@ public class TaskController {
     }
 
     @GetMapping
-    public List<TaskDTO> getAllTasks() {
-        return service.getAllTasks().stream().map(this::convertToDTO).collect(Collectors.toList());
+    public ResponseEntity<List<TaskDTO>> getAllTasks() {
+        List<TaskDTO> tasks = service.getAllTasks()
+                .stream()
+                .map(this::convertToDTO)
+                .collect(Collectors.toList());
+        return ResponseEntity.ok(tasks);
     }
 
     @PostMapping
-    public TaskDTO createTask(@RequestBody TaskDTO taskDTO) {
+    public ResponseEntity<TaskDTO> createTask(@Valid @RequestBody TaskDTO taskDTO) {
         Task task = convertToEntity(taskDTO);
         Task savedTask = service.createTask(task);
-        return convertToDTO(savedTask);
+        return ResponseEntity.status(HttpStatus.CREATED)
+                             .body(convertToDTO(savedTask));
     }
 
     @GetMapping("/title")
-    public List<TaskDTO> getTasksByTitle(@RequestParam String title) {
-        return service.getTasksByTitle(title).stream().map(this::convertToDTO).collect(Collectors.toList());
+    public ResponseEntity<List<TaskDTO>> getTasksByTitle(@RequestParam String title) {
+        List<TaskDTO> tasks = service.getTasksByTitle(title)
+                .stream()
+                .map(this::convertToDTO)
+                .collect(Collectors.toList());
+        return ResponseEntity.ok(tasks);
     }
 
     @GetMapping("/status")
-    public List<TaskDTO> getTasksByStatus(@RequestParam String status) {
-        return service.getTasksByStatus(status).stream().map(this::convertToDTO).collect(Collectors.toList());
+    public ResponseEntity<List<TaskDTO>> getTasksByStatus(@RequestParam String status) {
+        List<TaskDTO> tasks = service.getTasksByStatus(status)
+                .stream()
+                .map(this::convertToDTO)
+                .collect(Collectors.toList());
+        return ResponseEntity.ok(tasks);
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<TaskDTO> updateTask(@PathVariable Long id, @Valid @RequestBody TaskDTO taskDTO) {
+        Task existingTask = service.findTaskById(id);
+        if (existingTask == null) {
+            return ResponseEntity.notFound().build();
+        }
+        Task updatedTask = service.updateTask(id, convertToEntity(taskDTO));
+        return ResponseEntity.ok(convertToDTO(updatedTask));
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deleteTask(@PathVariable Long id) {
+        service.deleteTask(id);
+        return ResponseEntity.noContent().build();
     }
 
     private TaskDTO convertToDTO(Task task) {

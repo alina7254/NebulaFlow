@@ -22,6 +22,7 @@ public class Notification {
 
     private String title;
     private String message;
+    private String type;
     private LocalDateTime timestamp;
 }
 
