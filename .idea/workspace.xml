@@ -4,26 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a1ee2a35-1a8d-4b3d-bc16-5b01120663e4" name="Changes" comment="Implemented essential architecture components across all microservices: Controllers to handle HTTP requests, Services to encapsulate business logic, and Repositories to manage data persistence. This commit ensures that each microservice (User Management, Task Management, and Notification) has a foundational structure for future development and integration.">
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notification-service/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task-management-service/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/NotificationsPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/NotificationsPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/TasksPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/TasksPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/services/notificationService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/services/notificationService.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/services/taskService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/services/taskService.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/services/userService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/services/userService.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/vite.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/vite.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification-service/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task-management-service/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/task-management-service/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task-management-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/task-management-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-management-service/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/user-management-service/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-management-service/src/main/java/com/usermanagement/dto/UserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-management-service/src/main/java/com/usermanagement/dto/UserDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-management-service/src/main/java/com/usermanagement/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-management-service/src/main/java/com/usermanagement/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-management-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/user-management-service/src/main/resources/application.yml" afterDir="false" />
-    </list>
+    <list default="true" id="a1ee2a35-1a8d-4b3d-bc16-5b01120663e4" name="Changes" comment="Implemented essential architecture components across all microservices: Controllers to handle HTTP requests, Services to encapsulate business logic, and Repositories to manage data persistence. This commit ensures that each microservice (User Management, Task Management, and Notification) has a foundational structure for future development and integration." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
