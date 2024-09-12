@@ -117,7 +117,7 @@
       <recent name="C:\Users\alyay\Desktop\NebulaFlow\notification-service\src\main\java\com\example\notification" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.TaskManagementApplication">
+  <component name="RunManager" selected="Docker.user-management-service/Dockerfile">
     <configuration name="NotificationApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.notification.NotificationApplication" />
       <module name="NebulaFlow.notification-service.main" />
@@ -195,8 +195,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.TaskManagementApplication" />
         <item itemvalue="Docker.user-management-service/Dockerfile" />
+        <item itemvalue="Application.TaskManagementApplication" />
         <item itemvalue="Application.UserManagementApplication" />
         <item itemvalue="Application.NotificationApplication" />
         <item itemvalue="Docker.docker-compose.yml.notification-service: Compose Deployment" />
