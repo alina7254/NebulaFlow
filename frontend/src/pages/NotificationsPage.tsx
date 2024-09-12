@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import NotificationList from '../components/NotificationList';
-import { getNotifications } from '../services/notificationService';
+import { getNotification } from '../services/notificationService';
 
 const NotificationsPage: React.FC = () => {
   const [notifications, setNotifications] = useState([]);
 
   useEffect(() => {
     const fetchNotifications = async () => {
-      const notifications = await getNotifications();
+      const notifications = await getNotification('1');
       setNotifications(notifications);
     };
     fetchNotifications();

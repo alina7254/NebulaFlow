@@ -1,16 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import TaskList from '../components/TaskList';
-import { getTasks } from '../services/taskService';
+import { getTask } from '../services/taskService';
 
 const TasksPage: React.FC = () => {
   const [tasks, setTasks] = useState([]);
 
   useEffect(() => {
     const fetchTasks = async () => {
-      const tasks = await getTasks();
+      const tasks = await getTask ('1');
       setTasks(tasks);
     };
     fetchTasks();
+
   }, []);
 
   return (

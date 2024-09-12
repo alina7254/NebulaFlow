@@ -19,15 +19,18 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
     implementation("org.springframework.boot:spring-boot-starter-security")
     implementation("org.springframework.session:spring-session-data-redis")
-    implementation("com.h2database:h2")
+    implementation("org.springframework.boot:spring-boot-starter-validation")
+    implementation("mysql:mysql-connector-java:8.0.33")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
-    implementation("org.springframework.boot:spring-boot-starter-data-jpa")
-    implementation("org.springframework.boot:spring-boot-starter-security")
     implementation("org.projectlombok:lombok")
+
+    testImplementation("com.h2database:h2")
+
     annotationProcessor("org.projectlombok:lombok")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
+
 
 tasks.withType<Test> {
     useJUnitPlatform()

@@ -1,13 +1,14 @@
 import axios from 'axios';
 
-const NOTIFICATION_API_URL = 'http://localhost:8082/api/notifications';
+const NOTIFICATION_API_URL = 'http://notification-service:8080/api/notifications'; 
 
-export const getNotifications = async () => {
+export const getNotification = async (id: string) => {
   try {
-    const response = await axios.get(NOTIFICATION_API_URL);
+    const response = await axios.get(`${NOTIFICATION_API_URL}/${id}`);
     return response.data;
   } catch (error) {
-    console.error('Error fetching notifications', error);
+    console.error('Error fetching notification', error);
     throw error;
   }
 };
+

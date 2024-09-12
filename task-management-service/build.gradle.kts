@@ -23,7 +23,6 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     implementation("org.projectlombok:lombok")
 
-
     testImplementation("com.h2database:h2")
 
     annotationProcessor("org.projectlombok:lombok")

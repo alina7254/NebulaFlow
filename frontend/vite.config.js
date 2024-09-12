@@ -7,19 +7,19 @@ export default defineConfig({
     port: 3000,
     proxy: {
       '/api/tasks': {
-        target: 'http://localhost:8081',
+        target: 'http://task-service:8080',  
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api\/tasks/, ''),
         logLevel: 'debug'
       },
       '/api/notifications': {
-        target: 'http://localhost:8082',
+        target: 'http://notification-service:8080',  
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api\/notifications/, ''),
         logLevel: 'debug'
       },
       '/api/users': {
-        target: 'http://localhost:8080',
+        target: 'http://user-service:8080',  
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api\/users/, ''),
         logLevel: 'debug'
@@ -27,4 +27,6 @@ export default defineConfig({
     }
   }
 });
+
+
 

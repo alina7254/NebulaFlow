@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const USER_API_URL = 'http://localhost:8080/api/users';
+const USER_API_URL = 'http://user-service:8080/api/users';
 
 export const getUser = async (id: string) => {
   try {
@@ -11,3 +11,4 @@ export const getUser = async (id: string) => {
     throw error;
   }
 };
+
