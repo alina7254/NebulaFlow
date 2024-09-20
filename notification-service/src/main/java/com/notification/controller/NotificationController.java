@@ -5,6 +5,7 @@ import com.notification.model.Notification;
 import com.notification.service.NotificationService;
 import org.springframework.web.bind.annotation.*;
 
+
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
@@ -14,6 +15,7 @@ import java.util.stream.Collectors;
 @RequestMapping("/api/notifications")
 public class NotificationController {
     private final NotificationService service;
+
 
     public NotificationController(NotificationService service) {
         this.service = service;

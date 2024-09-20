@@ -2,7 +2,6 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import TasksPage from '../pages/TasksPage';
 import NotificationsPage from '../pages/NotificationsPage';
 import UserProfilePage from '../pages/UserProfilePage';
-import React from 'react';
 
 const AppRouter = () => (
   <Router>

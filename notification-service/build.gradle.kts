@@ -1,36 +1,41 @@
 plugins {
-    id("org.springframework.boot") version "2.7.12"
-    id("io.spring.dependency-management") version "1.0.11.RELEASE"
-    kotlin("jvm") version "1.6.21"
-    kotlin("plugin.spring") version "1.6.21"
+    java
+    id("org.springframework.boot") version "3.3.4"
+    id("io.spring.dependency-management") version "1.1.6"
+
+
 }
 
 group = "com.notification"
 version = "0.0.1-SNAPSHOT"
 
 
-repositories {
-    mavenCentral()
-}
 
+buildscript {
+    repositories {
+        maven {
+            url = uri("https://plugins.gradle.org/m2/")
+        }
+    }
 
 dependencies {
-    implementation("org.springframework.boot:spring-boot-starter-web")
-    implementation("org.springframework.boot:spring-boot-starter-data-jpa")
-    implementation("org.springframework.boot:spring-boot-starter-security")
-    implementation("org.springframework.session:spring-session-data-redis")
-    implementation("org.springframework.boot:spring-boot-starter-validation")
-    implementation("mysql:mysql-connector-java:8.0.33")
-    implementation("org.jetbrains.kotlin:kotlin-reflect")
-    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
-    implementation("org.projectlombok:lombok")
-
-    testImplementation("com.h2database:h2")
-
+    classpath("org.springframework.boot:spring-boot-starter-web")
+    classpath("org.springframework.boot:spring-boot-starter-data-jpa")
+    classpath("org.springframework.boot:spring-boot-starter-security")
+    classpath("org.springframework.session:spring-session-data-redis")
+    classpath("org.springframework.boot:spring-boot-starter-data-redis")
+    classpath("org.springframework.boot:spring-boot-starter-validation")
+    classpath("com.mysql:mysql-connector-j:8.2.0")
+    classpath("org.projectlombok:lombok")
+    classpath("com.fasterxml.jackson.module:jackson-module-kotlin")
+    classpath("org.jetbrains.kotlin:kotlin-reflect")
+    classpath("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+    developmentOnly("org.springframework.boot:spring-boot-docker-compose")
     annotationProcessor("org.projectlombok:lombok")
+    testImplementation("com.h2database:h2")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
-
+    }
 
 tasks.withType<Test> {
     useJUnitPlatform()
@@ -40,11 +45,18 @@ tasks.withType<Jar> {
     manifest {
         attributes["Main-Class"] = "com.notification.NotificationApplication"
     }
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+
+}
+tasks.withType<BootJar> {
+    archiveFileName.set("notification-service-0.0.1-SNAPSHOT.jar")
 }
 
 springBoot {
     mainClass.set("com.notification.NotificationApplication")
 }
+
+
 
 
 

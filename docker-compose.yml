@@ -1,55 +1,71 @@
 services:
   user-service:
-    build: ./user-management-service
+    build:
+      context: ./user-management-service
+      dockerfile: Dockerfile
     ports:
       - "8080:8080"
     environment:
-      - SPRING_PROFILES_ACTIVE=prod
-      - SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/mydb
-      - SPRING_DATASOURCE_USERNAME=root
-      - SPRING_DATASOURCE_PASSWORD=rootpassword
-      - SPRING_REDIS_HOST=redis
+      MYSQL_DATABASE: jdbc:mysql://mysql:3306/mydb
+      MYSQL_USER: user
+      MYSQL_PASSWORD: rootpassword
+      REDIS_HOST: redis
     depends_on:
-      - mysql
-      - redis
+         - mysql
+         - redis
+
   task-service:
-    build: ./task-management-service
+    build:
+      context: ./task-management-service
+      dockerfile: Dockerfile
     ports:
-      - "8081:8080"
+      - "8081:8081"
     environment:
-      - SPRING_PROFILES_ACTIVE=prod
-      - SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/mydb
-      - SPRING_DATASOURCE_USERNAME=root
-      - SPRING_DATASOURCE_PASSWORD=rootpassword
-      - SPRING_REDIS_HOST=redis
+      MYSQL_DATABASE_URL: jdbc:mysql://mysql:3306/mydb
+      MYSQL_USER: user
+      MYSQL_PASSWORD: rootpassword
+      REDIS_HOST: redis
     depends_on:
-      - mysql
-      - redis
+        - mysql
+        - redis
+
+
   notification-service:
-    build: ./notification-service
-    ports:
-      - "8082:8080"
+    build:
+      context: ./notification-service
+      dockerfile: Dockerfile
     environment:
-      - SPRING_PROFILES_ACTIVE=prod
-      - SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/mydb
-      - SPRING_DATASOURCE_USERNAME=root
-      - SPRING_DATASOURCE_PASSWORD=rootpassword
-      - SPRING_REDIS_HOST=redis
+      MYSQL_DATABASE: mydb
+      MYSQL_USER: user
+      MYSQL_PASSWORD: rootpassword
+      REDIS_HOST: redis
+    ports:
+       - "8082:8082"
     depends_on:
-      - mysql
-      - redis
+         - mysql
+         - redis
 
   mysql:
-    image: mysql:8
+    image: mysql:8.0
+    container_name: mysql
     environment:
+      MYSQL_USER: user
       MYSQL_ROOT_PASSWORD: rootpassword
       MYSQL_DATABASE: mydb
     ports:
-      - "3306:3306"
+      - "3307:3306"
 
   redis:
     image: redis
     ports:
-      - "6379:6379"
+      - "6372:6379"
+
+
+
+
+
+
+
+
 
 

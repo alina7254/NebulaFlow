@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const NOTIFICATION_API_URL = 'http://notification-service:8080/api/notifications'; 
+const NOTIFICATION_API_URL = 'http://notification-service:8082/api/notifications';
 
 export const getNotification = async (id: string) => {
   try {

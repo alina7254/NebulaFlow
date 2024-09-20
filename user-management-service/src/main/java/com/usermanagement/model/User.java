@@ -1,6 +1,8 @@
 package com.usermanagement.model;
 
-import lombok.*;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -10,8 +12,6 @@ import javax.persistence.Id;
 @Setter
 @Getter
 @Entity
-@Data
-@AllArgsConstructor
 @NoArgsConstructor
 public class User {
     @Id
@@ -19,6 +19,12 @@ public class User {
     private Long id;
     private String username;
     private String password;
+    private String email;
 
-
+    public User(String username, String password, String email) {
+        this.username = username;
+        this.password = password;
+        this.email = email;
+    }
 }
+

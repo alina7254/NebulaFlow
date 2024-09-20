@@ -1,5 +1,6 @@
 package com.usermanagement.controller;
 
+import com.usermanagement.dto.UserDTO;
 import com.usermanagement.model.User;
 import com.usermanagement.service.UserService;
 import org.springframework.web.bind.annotation.*;
@@ -14,12 +15,14 @@ public class UserController {
     }
 
     @PostMapping
-    public User createUser(@RequestBody User user) {
-        return service.createUser(user);
+    public UserDTO createUser(@RequestBody UserDTO userDTO) {
+        User user = service.createUser(userDTO);
+        return new UserDTO(user.getId(), user.getUsername(), user.getEmail());
     }
 
     @GetMapping("/{username}")
-    public User getUserByUsername(@PathVariable String username) {
-        return service.findUserByUsername(username);
+    public UserDTO getUserByUsername(@PathVariable String username) {
+        User user = service.findUserByUsername(username);
+        return new UserDTO(user.getId(), user.getUsername(), user.getEmail());
     }
 }

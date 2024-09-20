@@ -1,4 +1,6 @@
 spring:
+  application:
+    name: task-management-service
   server:
     port: 8081
   datasource:
